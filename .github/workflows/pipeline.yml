@@ -20,5 +20,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Compile Java
+        run: javac -d out $(find src -name "*.java")
+      - name: Run JAR
+        run: java -jar out/artifacts/ClinicSystem_jar/ClinicSystem.jar
+      
