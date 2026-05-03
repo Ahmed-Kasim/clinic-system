@@ -1,0 +1,4 @@
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY out/artifacts/ClinicSystem_jar/ClinicSystem.jar app.jar
+CMD ["java", "-jar", "app.jar"]
