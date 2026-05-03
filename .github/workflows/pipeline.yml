@@ -20,11 +20,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Create output folder
-        run: mkdir -p out
+      - name: Create build folder
+        run: mkdir -p build
 
       - name: Compile Java
-        run: javac -d out $(find src -name "*.java")
+        run: javac -d build $(find src -name "*.java")
 
       - name: Run Application
-        run: java -cp out Main
+        run: java -cp build Main
