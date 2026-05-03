@@ -24,4 +24,4 @@ jobs:
         run: javac -d out $(find src -name "*.java")
 
       - name: Run Application
-        run: java -cp out MainClassName
+        run: java -cp out Main
