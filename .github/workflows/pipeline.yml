@@ -23,8 +23,8 @@ jobs:
       - name: Create build folder
         run: mkdir -p build
 
-      - name: Compile Java
-        run: javac -d build $(find src -name "*.java")
+      - name: Compile Java (skip tests)
+        run: javac -d build $(find src -name "*.java" ! -name "*Test.java")
 
       - name: Run Application
         run: java -cp build Main
