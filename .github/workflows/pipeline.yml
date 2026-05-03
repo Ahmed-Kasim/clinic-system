@@ -22,6 +22,6 @@ jobs:
 
       - name: Compile Java
         run: javac -d out $(find src -name "*.java")
-      - name: Run JAR
-        run: java -jar out/artifacts/ClinicSystem_jar/ClinicSystem.jar
-      
+
+      - name: Run Application
+        run: java -cp out MainClassName
