@@ -23,4 +23,11 @@ public class SystemTest {
         Appointment a = new Appointment("Dr. Zeyad", "10:00 AM");
         assertEquals("Dr. Zeyad at 10:00 AM", a.getDetails());
     }
+    @Test
+    void testReceptionistConfirmation() {
+        Appointment a = new Appointment("Dr. Zeyad", "10:00 AM");
+        Receptionist r = new Receptionist();
+        assertTrue(r.confirmAppointment(a));
+    }
+
 }
